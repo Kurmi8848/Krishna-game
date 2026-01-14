@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スネークゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>スネークゲーム</h1>
+        
+        <div class="info-panel">
+            <p>残りライフ: <span id="lives">10</span> / 10</p>
+            <p>スコア: <span id="score">0</span></p>
+        </div>
+
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <div class="controls">
+            <label for="speedSelect">速度設定：</label>
+            <select id="speedSelect">
+                <option value="150">遅い</option>
+                <option value="100" selected>並み</option>
+                <option value="50">速い</option>
+            </select>
+            <button id="startBtn">スタート / 再試行</button>
+        </div>
+
+        <div class="instructions">
+            <h3>【遊び方】</h3>
+            <ul>
+                <li><strong>移動:</strong> キーボードの矢印キー（↑ ↓ ← →）</li>
+                <li><strong>目的:</strong> 赤い餌を食べると蛇が長くなり、スコアが加算されます。</li>
+                <li><strong>ミス:</strong> 壁にぶつかるとライフが1減ります。</li>
+                <li><strong>終了:</strong> 10回ミスするとゲームオーバーです。</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
